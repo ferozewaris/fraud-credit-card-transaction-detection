@@ -1,0 +1,57 @@
+{
+  "raw_data_path": "/FileStore/tables/fraud_detection/transaction_data_updated.csv",
+  "raw_data_file_type": "csv",
+  "raw_data_delimiter": ",",
+  "preprocessing_cols_remove": [
+    "_c0",
+    "accountNumber",
+    "customerId",
+    "merchantName",
+    "acqCountry",
+    "cardLast4Digits",
+    "transactionDateTime"
+  ],
+  "target_col_name": "isFraud",
+  "numerical_variables": [
+    "creditLimit",
+    "availableMoney",
+    "transactionAmount",
+    "posEntryMode",
+    "posConditionCode",
+    "cardCVV",
+    "enteredCVV",
+    "currentBalance"
+  ],
+  "categorical_columns": [
+    "merchantName",
+    "acqCountry",
+    "merchantCountryCode",
+    "merchantCategoryCode",
+    "currentExpDate"
+  ],
+  "boolean_columns": [
+    "cardPresent",
+    "expirationDateKeyInMatch"
+  ],
+  "date_time_columns": [
+    "accountOpenDate",
+    "dateOfLastAddressChange"
+  ],
+  "card_cvv_col_name": "cardCVV",
+  "entered_cvv_col_name": "enteredCVV",
+  "is_entered_wrong_cvv_col_name": "isEnteredWrongCVV",
+  "account_open_date_col_name": "accountOpenDate",
+  "date_last_address_change_col_name": "dateOfLastAddressChange",
+  "is_address_change_col_name": "isAddressChanged",
+  "numerical_imputation_strategy": "mean",
+  "categorical_imputation_strategy": "mode",
+  "boolean_imputation_strategy": "mode",
+  "current_exp_date_col_name": "currentExpDate",
+  "card_expiry_month_col_name": "cardExpiryMonth",
+  "card_expiry_year_col_name": "cardExpiryYear",
+  "transaction_date_time_col": "transactionDateTime",
+  "feature_table_path": "/FileStore/tables/fraud_detection/feature_table.csv",
+  "feature_table_format": "csv",
+  "train_split": 0.7,
+  "test_split": 0.3
+}
